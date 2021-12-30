@@ -1,0 +1,46 @@
+.FeatureInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.FeatureItem {
+  padding: 1rem;
+  flex: 1;
+  box-shadow: 4px 2px 10px -7px #444;
+  border-radius: 10px;
+}
+.MoneyContainer {
+  padding: 5px;
+}
+.FeatureMoney {
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+.FeatureMoneyRate {
+  color: lightgreen;
+  font-weight: 400;
+  font-size: 14px !important;
+}
+.FeatureMoneyRate.Negative {
+  color: lightcoral;
+}
+.FeatureDescription {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+.FeatureTitle {
+  display: inline-block;
+  font-size: 12px !important;
+  margin-top: 5px;
+  font-weight: 400;
+  color: #555;
+}
+.FeatureMoneyRate {
+  font-size: 10px;
+  padding: 5px;
+}

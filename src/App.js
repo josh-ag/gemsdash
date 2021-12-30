@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Appbar } from "./components/appbar/appbar";
+import { Sidebar } from "./components/sidebar/sidebar";
+import { HomePage } from "./pages/home/home";
+import { Users } from "./pages/users/users";
+import { NoMatch } from "./noMatch";
+import { UserDetails } from "./pages/userDetails/userDetails";
+import { AppStateContext } from "./context/appContext";
+import { CreateUser } from "./pages/createUser/createUser";
+import { ProductsPage } from "./pages/products/products";
+
+import "./app.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AppStateContext>
+        <Appbar />
+
+        <div className="Container">
+          <Sidebar />
+
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+
+            {/* <Route path="/users">
+              <Users />
+            </Route>
+            <Route path="/products">
+              <ProductsPage />
+            </Route>
+            <Route path="/user/add">
+              <CreateUser />
+            </Route>
+            <Route path="/user/:id">
+              <UserDetails />
+            </Route>
+            <Route path="*">
+              <NoMatch />
+            </Route> */}
+          </Routes>
+        </div>
+      </AppStateContext>
+    </Router>
   );
 }
 

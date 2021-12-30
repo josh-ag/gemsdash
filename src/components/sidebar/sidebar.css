@@ -1,0 +1,47 @@
+.Sidebar {
+  flex: 1;
+  max-width: 20%;
+  height: calc(100vh - 50px);
+  background: rgb(177, 146, 131);
+  position: sticky;
+  top: 50px;
+  overflow-y: auto;
+}
+
+.SidebarWrapper {
+  padding: 0px 1rem;
+}
+
+.SidebarTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  text-align: left;
+}
+.SidebarList {
+  list-style: none;
+  padding: 0px 8px;
+  margin-top: -8px;
+}
+.SidebarLink {
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #333;
+  width: 90%;
+  text-align: left;
+  box-shadow: 1px 2px 17px -7px #444;
+  margin-bottom: 8px;
+}
+.SidebarIcon {
+  margin-right: 0.5rem;
+  color: #444;
+}
+/* .Sidebar.Active, */
+.SidebarLink:hover {
+  background-color: rgb(167, 100, 79);
+}

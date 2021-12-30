@@ -1,0 +1,152 @@
+.Sales {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.NewMembers {
+  flex: 1;
+  box-shadow: 4px 2px 10px -7px #444;
+  padding: 20px;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.NewMemberTitle,
+.TransactionsTitle {
+  color: #444;
+  margin-top: -8px;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Member {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0px;
+}
+
+.MemberLeft,
+.MemberRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.MemberRight {
+  background: rgb(168, 168, 168);
+  border-radius: 20px;
+}
+
+.LeftTitle a {
+  color: #427ce7;
+  text-decoration: none;
+}
+
+.LeftTitle a:active,
+.LeftTitle a:hover {
+  text-decoration: underline;
+}
+.TitleLarge {
+  font-size: 14px;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.TitleSmall {
+  font-size: 12px;
+
+  margin-left: 1rem;
+}
+
+.MemberRightIcon,
+.RightTitle {
+  font-size: 12px;
+  color: #444;
+  padding: 5px;
+}
+
+.RightTitle {
+  margin-right: 5px;
+}
+
+.Transactions {
+  flex: 2;
+  box-shadow: 4px 2px 10px -7px #444;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.TransactionCustomerCell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TransactionCutomersName {
+  display: inline-block;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #555;
+}
+
+.Approved {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 70%;
+  border-radius: 16px;
+  background-color: rgb(180, 241, 221) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.Pending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 70%;
+  border-radius: 16px;
+  background-color: rgb(255, 217, 217) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.UserListEdit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 70%;
+  text-decoration: none;
+  border-radius: 16px;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background: lightblue !important;
+  color: #444 !important;
+}
+
+.UserListDelete {
+  color: rgb(245, 71, 71);
+  margin-left: 10px;
+}
+
+.UsersListBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.UsersListTitle {
+  color: #555;
+}
+
+.NewUserButton {
+  color: #ddd !important;
+  background-color: rgb(16, 97, 129) !important;
+}

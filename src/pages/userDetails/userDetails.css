@@ -1,0 +1,204 @@
+.UserDetailPage {
+  flex: 4;
+  padding: 20px;
+}
+
+.UserDetails {
+  display: flex;
+}
+
+.UserDetailsInfo {
+  flex: 1;
+  box-shadow: 4px 2px 10px -7px #444;
+}
+
+.UserInfoAppBar {
+  background-color: rgb(167, 163, 161);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.UserInfoTitle {
+  margin-left: 10px;
+}
+
+.UserInfoTitle.Large {
+  font-size: 16px !important;
+  color: #444 !important;
+  font-weight: 600 !important;
+  display: block;
+}
+
+.UserInfoTitle.Small {
+  font-size: 14px !important;
+  color: #444 !important;
+  font-weight: 400 !important;
+  display: block;
+}
+
+.UserDetailList {
+  list-style: none;
+}
+
+.UserDetailListTitle {
+  color: #555;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.UserDetailListItem {
+  margin-bottom: 30px;
+}
+
+.UserDetailLabel {
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+  display: block;
+  margin-top: -10px;
+}
+
+.UserDetailIcons {
+  font-size: 14px !important;
+  color: #555 !important;
+}
+
+.UserDetailText {
+  font-size: 14px;
+  margin-left: 8px;
+  color: #555;
+  font-weight: 400;
+}
+
+.UserDetailsUpdate {
+  flex: 2;
+  margin-left: 10px;
+  box-shadow: 4px 2px 10px -7px #444;
+}
+
+.UserUpdateTitle {
+  color: #555;
+  margin-left: 20px;
+}
+
+.UserUpdateWrapper {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.UserDetailsUpdateForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.UserDetailsUpdateLeft {
+  flex: 2;
+}
+
+.UserDetailsUpdateRight {
+  flex: 1;
+  justify-content: flex-end;
+  margin-left: 45px;
+}
+
+.UserUpdateSubmit {
+  display: flex;
+  margin-top: 20px;
+  padding: 10px 0px;
+  justify-content: center;
+}
+
+.InputElement {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.UserUpdateLabel {
+  padding-bottom: 5px;
+  color: #444;
+}
+
+.TextInput {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  padding: 8px;
+  background-color: transparent !important;
+  border-bottom: 1px solid #444;
+  width: 100%;
+}
+
+.UserUpdateProfilePicture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: auto;
+}
+
+.UserUpdateSubmitButton {
+  width: 120px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background: rgb(177, 146, 131);
+  color: #555;
+  border-radius: 16px;
+}
+
+.CustomerTransaction {
+  padding: 2rem;
+  box-shadow: 4px 2px 10px -7px #444;
+  min-height: 15rem;
+}
+
+.TransactionTitle {
+  color: #555;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.TransactionList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.TransactionCard {
+  width: 20rem;
+  padding: 1rem;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  box-shadow: 4px 2px 10px -7px #444;
+}
+.TransactionDataHeader {
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.TransactionDataHeader label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+  background: rgb(177, 146, 131);
+  border-radius: 50px;
+  height: 2rem;
+  width: 2rem;
+}
+
+.TransactionCard li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.TextLarge {
+  font-weight: 600;
+}

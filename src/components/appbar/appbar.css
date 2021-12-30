@@ -1,0 +1,65 @@
+.Appbar {
+  width: 100%;
+  height: 50px;
+  background: #ddd;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+}
+.AppbarLogo {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.AppbarWrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.Appbar .AppbarTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(228, 100, 100);
+}
+.AppbarIcon {
+  color: #555;
+}
+.Appbar .Left {
+  text-decoration: none;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.Appbar .Right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.AppbarIcons {
+  margin-right: 5px;
+}
+.AppbarIconNotification {
+  position: relative;
+}
+.AppbarIconNotification .NotificationBadge {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgb(238, 68, 68);
+  color: #f8f9fa;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  position: absolute;
+  top: -5;
+  right: 0;
+}
+.AppbarImage {
+  cursor: pointer;
+  width: 400%;
+  height: 400%;
+}

@@ -1,0 +1,9 @@
+.UsersList {
+  flex: 4;
+  padding: 20px;
+}
+
+.NewUserButton a {
+  text-decoration: none;
+  color: #d4d4d4;
+}
