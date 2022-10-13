@@ -1,11 +1,9 @@
 .Sidebar {
-  flex: 1;
-  max-width: 20%;
-  height: calc(100vh - 50px);
-  background: rgb(177, 146, 131);
+  width: "100%";
+  background: rgb(98, 121, 134);
   position: sticky;
-  top: 50px;
-  overflow-y: auto;
+  height: calc(100vh - 50px);
+  top: 55px;
 }
 
 .SidebarWrapper {
@@ -25,7 +23,7 @@
 }
 .SidebarLink {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -36,12 +34,12 @@
   text-align: left;
   box-shadow: 1px 2px 17px -7px #444;
   margin-bottom: 8px;
+  background-color: rgb(98, 121, 134);
+}
+.SidebarLink:hover {
+  background-color: rgb(31, 107, 152);
 }
 .SidebarIcon {
   margin-right: 0.5rem;
   color: #444;
-}
-/* .Sidebar.Active, */
-.SidebarLink:hover {
-  background-color: rgb(167, 100, 79);
 }

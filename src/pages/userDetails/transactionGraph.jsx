@@ -1,8 +1,10 @@
+import { useContext } from "react";
+import { AppContext } from "../../context/appContext";
 import "./userDetails.css";
-import { Transactions } from "../../components/data";
 
 export const TransactionGraph = ({ userID }) => {
-  const currentUserTransactions = Transactions.filter(
+  const { transactions } = useContext(AppContext);
+  const currentUserTransactions = transactions.filter(
     (transaction) => transaction.userId === userID
   );
   return (

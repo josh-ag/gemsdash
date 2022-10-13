@@ -1,16 +1,16 @@
 import { useContext } from "react";
 import "./sales.css";
-import { Avatar } from "@material-ui/core";
-import { NewJoinCustomers } from "./newJoinCustomers";
+import { Avatar, Typography, Box, Button } from "@material-ui/core";
+import { NewCustomers } from "./newCustomer";
 import { DataGrid } from "@material-ui/data-grid";
 import { AppContext } from "../../context/appContext";
 
-const LatestCustomersTransactions = ({ rows, customers }) => {
+const CustomersTransactions = ({ rows, customers }) => {
   const Columns = [
     { field: "id", headerName: "ID", width: 100 },
     {
       field: "customer",
-      headerName: "Customers",
+      headerName: "CUSTOMER",
       width: 200,
       renderCell: (params) => {
         const isMatch = customers.filter(
@@ -18,62 +18,115 @@ const LatestCustomersTransactions = ({ rows, customers }) => {
         );
 
         return (
-          <div className="TransactionCustomerCell">
+          <Box
+            style={{
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <Avatar src={isMatch[0].avatar} />
-            <span
-              className="TransactionCutomersName"
-              style={{ marginLeft: "5px" }}
-            >
+            <Typography style={{ marginLeft: "16px" }} variant="subtitle1">
               {isMatch[0].userName}
-            </span>
-          </div>
+            </Typography>
+          </Box>
         );
       },
     },
-    { field: "date", headerName: "Date", width: 150 },
-    { field: "transaction", headerName: "Amount", width: 150 },
+
     {
-      field: "status",
-      headerName: "Status",
+      field: "transaction",
+      headerName: "AMOUNT",
       width: 150,
       renderCell: (params) => (
-        <span className={params.row.status}>{params.row.status}</span>
+        <Typography variant="subtitle1">{params.row.transaction}</Typography>
       ),
+    },
+    {
+      field: "status",
+      headerName: "STATUS",
+      width: 150,
+      renderCell: (params) => (
+        <Typography
+          style={{
+            color:
+              params.row.status === "Pending"
+                ? "rgb(186, 72, 72)"
+                : "rgb(2, 172, 118)",
+          }}
+        >
+          {params.row.status}
+        </Typography>
+      ),
+    },
+    {
+      field: "date",
+      headerName: "DATE",
+      width: 150,
+      renderCell: (params) => (
+        <Typography variant="subtitle1">{params.row.date}</Typography>
+      ),
+    },
+    {
+      field: "action",
+      headerName: "ACTION",
+      width: 150,
+      renderCell: (params) => {
+        return (
+          <Button
+            size="small"
+            variant="contained"
+            style={{ backgroundColor: "rgb(4, 118, 163)", color: "#ddd" }}
+            disableElevation
+          >
+            preview
+          </Button>
+        );
+      },
     },
   ];
 
   return (
-    <div style={{ width: "100%", height: 300 }}>
+    <Box style={{ width: "100%", height: "100%", paddingTop: 16 }}>
       <DataGrid
         columns={Columns}
         rows={rows}
-        pageSize={20}
+        autoHeight={true}
+        autoPageSize={true}
+        checkboxSelection={true}
         disableSelectionOnClick
+        // loading={true}
       />
-    </div>
+    </Box>
   );
 };
 
-export const SalesCompoent = () => {
-  const { Customers, LatestTransaction } = useContext(AppContext);
+export const SalesComponent = () => {
+  const { customers, transactions } = useContext(AppContext);
 
   return (
-    <div className="Sales">
-      <div className="NewMembers">
-        <h4 className="NewMemberTitle">New Join Members</h4>
-        {Customers &&
-          Customers.filter((customer) => customer.id <= 5).map((customer) => (
-            <NewJoinCustomers customer={customer} key={customer.id} />
-          ))}
-      </div>
+    <Box className="Sales">
+      <Box className="NewMembers">
+        <Typography className="NewMemberTitle" variant="h6">
+          Newly Join Members
+        </Typography>
+        <Box style={{ paddingTop: 16 }}>
+          {customers &&
+            customers
+              .filter((customer) => customer.id <= 6)
+              .map((customer) => (
+                <NewCustomers customer={customer} key={customer.id} />
+              ))}
+        </Box>
+      </Box>
 
-      <div className="Transactions">
-        <h4 className="TransactionsTitle">Latest Transactions</h4>
-        <LatestCustomersTransactions
-          rows={LatestTransaction}
-          customers={Customers}
-        />
-      </div>
-    </div>
+      <Box className="Transactions">
+        <Typography className="TransactionsTitle" variant="h6">
+          Latest Transactions
+        </Typography>
+        <CustomersTransactions rows={transactions} customers={customers} />
+      </Box>
+    </Box>
   );
 };

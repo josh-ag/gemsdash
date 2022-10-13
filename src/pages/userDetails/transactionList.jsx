@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import "./userDetails.css";
-import { Transactions } from "../../components/data";
+import { AppContext } from "../../context/appContext";
 
 export const TransactionList = ({ userID }) => {
-  const currentUserTransactions = Transactions.filter(
+  const { transactions } = useContext(AppContext);
+
+  const currentUserTransactions = transactions.filter(
     (transaction) => transaction.userId === userID
   );
   return (

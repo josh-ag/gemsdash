@@ -1,43 +1,99 @@
+import { Typography, Box } from "@material-ui/core";
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
 import "./featureinfo.css";
 
 export const FeatureInfo = () => {
   return (
-    <div className="FeatureInfo">
-      <div className="FeatureItem">
-        <span className="FeatureDescription">Revenue</span>
-        <div className="MoneyContainer">
-          <span className="FeatureMoney">$25500</span>
-          <span className="FeatureMoneyRate">
-            44.3
+    <Box className="FeatureInfo">
+      <Box className="FeatureItem">
+        <Typography className="FeatureDescription" variant="h6">
+          Revenue
+        </Typography>
+        <Box
+          className="MoneyContainer"
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            padding: "16px 0px",
+          }}
+        >
+          <Typography className="FeatureMoney" variant="h4">
+            $75500
+          </Typography>
+          <Typography className="FeatureMoneyRate">
+            +44.3%
             <ArrowUpward fontSize="small" />
-          </span>
-        </div>
-        <span className="FeatureTitle">Compare to last month</span>
-      </div>
+          </Typography>
+        </Box>
+        <Typography
+          className="FeatureTitle"
+          variant="body1"
+          style={{ width: "100%", textAlign: "center" }}
+        >
+          Compare to last month
+        </Typography>
+      </Box>
 
-      <div className="FeatureItem">
-        <span className="FeatureDescription">Sales</span>
-        <div className="MoneyContainer">
-          <span className="FeatureMoney">$33400</span>
-          <span className="FeatureMoneyRate">
-            +2.3
+      <Box className="FeatureItem">
+        <Typography className="FeatureDescription" variant="h6">
+          Sales
+        </Typography>
+        <Box
+          className="MoneyContainer"
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            padding: "16px 0px",
+          }}
+        >
+          <Typography className="FeatureMoney" variant="h4">
+            $33400
+          </Typography>
+          <Typography className="FeatureMoneyRate" variant="button">
+            +2.3%
             <ArrowUpward fontSize="small" />
-          </span>
-        </div>
-        <span className="FeatureTitle">Compare to last month</span>
-      </div>
-      <div className="FeatureItem">
-        <span className="FeatureDescription">Costs</span>
-        <div className="MoneyContainer">
-          <span className="FeatureMoney">$13200</span>
-          <span className="FeatureMoneyRate Negative">
-            -12.44
+          </Typography>
+        </Box>
+        <Typography
+          className="FeatureTitle"
+          variant="body1"
+          style={{ width: "100%", textAlign: "center" }}
+        >
+          Compare to last month
+        </Typography>
+      </Box>
+
+      <Box className="FeatureItem">
+        <Typography className="FeatureDescription" variant="h6">
+          Costs
+        </Typography>
+        <Box
+          className="MoneyContainer"
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            padding: "16px 0px",
+          }}
+        >
+          <Typography className="FeatureMoney" variant="h4">
+            $13200
+          </Typography>
+          <Typography className="FeatureMoneyRate Negative">
+            -12.44%
             <ArrowDownward fontSize="small" />
-          </span>
-        </div>
-        <span className="FeatureTitle">Compare to last month</span>
-      </div>
-    </div>
+          </Typography>
+        </Box>
+        <Typography
+          className="FeatureTitle"
+          variant="body1"
+          style={{ width: "100%", textAlign: "center" }}
+        >
+          Compare to last month
+        </Typography>
+      </Box>
+    </Box>
   );
 };
